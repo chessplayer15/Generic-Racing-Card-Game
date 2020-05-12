@@ -3,27 +3,26 @@
 <html>
 <head>
 <style>
- /* */
 
 body {margin: auto; background-color: green}
 
-#container {width: 700px; height: 100%; margin: auto; text-align: center}
+#container {height: 1000px; width: 900px; margin: auto; text-align: center}
 
-#racepage {float: left; clear: both; width: 32%; height: 40px; border: 3px solid black; background-color: #D00000; font-weight: bold; font-size: 25px; color: white; margin: 5px 0 5px 0; line-height: 40px;}
+#racepage {float: left; width: 294px; height: 30px; border: 3px solid black; background-color: #D00000; font-weight: bold; font-size: 25px; color: white; margin: 5px 0 5px 0;}
 
-#standpage {float: left; width: 32%; height: 40px; border: 3px solid black; background-color: #D00000; font-weight: bold; font-size: 25px; color: white; margin: 5px 0 5px 0; line-height: 40px;}
+#standpage {float: left; width: 294px; height: 30px; border: 3px solid black; background-color: #D00000; font-weight: bold; font-size: 25px; color: white; margin: 5px 0 5px 0;}
 
-#tstandpage {float: left; width: 32%; height: 40px; border: 3px solid black; background-color: #D00000; font-weight: bold; font-size: 25px; color: white; margin: 5px 0 5px 0; line-height: 40px;}
+#tstandpage {float: left; width: 294px; height: 30px; border: 3px solid black; background-color: #D00000; font-weight: bold; font-size: 25px; color: white; margin: 5px 0 5px 0;}
 
 div {font-size: 0}
 
-#laps, #races, #racesT {background-color: gray; font-weight: bold; font-size: 30px; color: black; width: 100%; margin: 10px 0 0 0;}
+#laps, #races, #racesT {background-color: gray; font-weight: bold; font-size: 30px; color: black; width: 900px; margin: 10px 0 0 0;}
 
-.position, .driverposition, .teamposition {float: left; width: 6%; background-color: white; font: black; margin: 0 0 0 0;}
+.position, .driverposition, .teamposition {float: left; width: 42px; background-color: white; font: black; font-size: 20px; margin: 0 0 0 0;}
 
-.rank {float: left; width: 40%; background-color: black; margin: 0 0 0 0;}
+.rank {float: left; width: 250px; background-color: black; margin: 0 0 0 0;}
 
-.driverStandings, .teamStandings {float: left; width: 90%; background-color: black; margin: 0 0 0 0;}
+.driverStandings, .teamStandings {float: left; width: 858px; background-color: black; margin: 0 0 0 0;}
 
 thead {font-size: 20px; font-weight: bold; text-align: center; background-color: white; color: black; margin: 0}
 
@@ -31,36 +30,40 @@ thead {font-size: 20px; font-weight: bold; text-align: center; background-color:
 
 #Player, #Teammate {background-color: #ffffff; font-weight: bold;}
 
-#N01, #N02, #DName01, #DName02, #TN01 {margin: 5px 5px 5px 5px; text-align: left; font: black; font-size: 22px;}
+#N01, #N02, #DName01, #DName02, #TN01 {margin: 5px 5px 5px 5px; text-align: left; font: black; font-size: 18px;}
 
-#T01, #T02, #P01, #P02, #TP01 {margin: 5px 5px 5px 5px; text-align: right; font-size: 22px;}
+#T01, #T02, #P01, #P02, #TP01 {margin: 5px 5px 5px 5px; text-align: right; font-size: 20px;}
 
-#PTL01, #PTL02, #PTTL {margin: 5px 5px 5px 5px; text-align: right; font-size: 19px;}
+#PTL01, #PTL02, #PTTL {margin: 5px 5px 5px 5px; text-align: right; font-size: 17px;}
 
-#DN01, #DN02, #DDN01, #DDN02, #TDN01 {margin: 5px 5px 5px 5px; text-align: right; font-size: 15px;}
+#DN01, #DN02, #DDN01, #DDN02, #TDN01 {margin: 5px 5px 5px 5px; text-align: right; font-size: 12px;}
 
-#card0, #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9 {margin: 20px 20px 20px 20px; float: left; width: 80px; height: 110px; background-color: white; border-radius: 5px; line-height: 110px}
+#card0, #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9 {margin: 20px 20px 20px 20px; float: left; height: 100px; width: 80px; background-color: white; border-radius: 5px; line-height: 100px}
 
-.track {float: left; clear: right; height: 300px; width: 27%; background-color: black; color: White; font-size: 20px; margin: 0 0 0 0;}
+.track {position: absolute; top: 81px; left: 292px; height: 200px; width: 180px; background-color: black; color: white; font-size: 18px; margin: 0 0 0 0;}
 
-.table {float: right; clear: right; height: 300px; width: 27%; background-color: black; margin: 0 0 0 0;}
+.table {position: absolute; top: 81px; left: 472px;  height: 200px; width: 180px; background-color: black; margin: 0 0 0 0;}
 
-#tableCard {width: 139px; height: 180px; margin: 60px 25px 60px 25px; background-color: orange; border-radius: 12px; line-height: 180px;}
+#tableCard {height: 160px; width: 120px; margin: 20px 30px 20px 30px; background-color: orange; border-radius: 12px; line-height: 160px;}
 
-.you {float: right; clear: right; height: 450px; width: 54%; background-color: white}
+.you {position: absolute; top: 281px; left: 292px; height: 420px; width: 360px; background-color: white}
 
-.buttons {float: right; clear: right; width: 54%; height: 180px; background-color: green}
+.buttons {position: absolute; top: 751px; left: 292px; height: 249px; width: 360px; background-color: green}
 
-p {font-size: 22px; font-weight: bold; text-align: center; margin: 0}
+p {font-size: 20px; font-weight: bold; margin: 0 0 0 0}
 
-#rules {margin-top:20px; font-size: 16px; border-radius: 5px; border-color: black;}
+#rules {margin-top: 10px; font-size: 20px; border-radius: 5px; border-color: black;}
 
-#drawBtn {margin-top:25px; font-size: 30px; font-weight: bold; background-color: #0F0; border-radius: 5px;}
+#drawBtn {margin-top:30px; font-size: 30px; font-weight: bold; background-color: #0F0; height: 40px; width: 160px; border-radius: 5px;}
 
-#psBtn {font-size: 30px; font-weight: bold; background-color: #F00; width: 200px; height: 40px; border-radius: 5px; margin-top: 25px;}
+#psBtn {margin-top:30px; font-size: 30px; font-weight: bold; background-color: #F00; height: 40px; width: 180px; border-radius: 5px;}
 
-#nextBtn {font-size: 30px; font-weight: bold; background-color: #808080; border-radius: 5px; margin: 15px 0 15px 0;}
+#nextBtn {font-size: 30px; font-weight: bold; background-color: #808080; border-radius: 5px; margin: 30px 0 30px 0;}
 
+#eventhead {position: absolute; top: 81px; left: 652px; border: 5px solid black; height: 40px; width: 238px; background-color: white; text-align: left; font-weight: bold; font-size: 28px; color: black; text-decoration: underline; margin: 0 0 0 0;}
+
+
+#events {position: absolute; top: 121px; left: 652px; border: 5px solid black; height: 879px; width: 238px; background-color: white; text-align: left; margin: 0 0 0 0; overflow: auto;}
 </style>
 <title>Generic Racing Card Game</title>
 </head>
@@ -71,7 +74,7 @@ p {font-size: 22px; font-weight: bold; text-align: center; margin: 0}
 <span id=tstandpage onclick="show('Page3');">Team Standings</span> 
 </p>
 <div class=page1>
-<div id="Page1" class="page" style=""> Content of page 1
+<div id=Page1 class="page" style=""> Content of page 1
 
 <div id=laps>
 Lap # <span id=lapsD></span>/<span id=lapsT></span>
@@ -144,6 +147,9 @@ Lap # <span id=lapsD></span>/<span id=lapsT></span>
 <p><button id=rules onclick="toggleRules()">How to Play</button>
 <p><button id=drawBtn onclick="nextlap()">END TURN</button>
 <p><button id=psBtn onclick="pitStop()">PIT STOP</button></p>
+</div>
+<h6 id=eventhead>Events of the Race</h6>
+<div id=events>
 </div>
 </div>
 </div>
@@ -245,17 +251,6 @@ Race # <span id=racesDT>1</span>/<span id=racesTT></span>
 </div>
 </div>
 <script>
- //
-//To Do List
-//
-//Damage from crashing cars if less than 1 second behind?????
-//Change Team Colors
-//Tire wear
-//Different Tires
-
-//Position1st2nd3rd4th5th6th7th8th9th10th11th12th13th14th15th16th17th18th19th20th21st
-//Points 90, 60, 40, 30, 25, 20, 18, 16, 14, 12, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
-
 var nums = [0], num;
     for (var i = 0; i < 1000; i++) {
     do {
@@ -488,7 +483,7 @@ var driverlist = [none, driver001, driver002, driver003, driver004, driver005, d
 //6=1%
 
 window.onload = function() {
-    alert("Hello, welcome.  Over the next few pages you will insert your team, driver, and teammates name.  As well as how many races you would like to run.  Also, if you are unfamiliar with the rules please click how to play. (WARNING THERE ARE A LOT OF ALERTS.)");
+    alert("Hello, welcome.  Over the next few pages you will insert your team, driver, and teammates name.  As well as how many races you would like to run.  Also, if you are unfamiliar with the rules please click how to play.");
     var tableData = document.getElementById('rank').getElementsByTagName('tbody').item(0); 
     var rowData = tableData.getElementsByTagName('tr');
     var a = document.getElementById("card0");
@@ -535,6 +530,7 @@ window.onload = function() {
     driverlist[202].team = TN01.innerHTML;
     N01.innerHTML = prompt("Enter driver name.");
     DName01.innerHTML = N01.innerHTML;
+    driverlist[201].name = N01.innerHTML;
     N02.innerHTML = prompt("Enter your teammates name.");
     DName02.innerHTML = N02.innerHTML;
     driverlist[202].name = N02.innerHTML;
@@ -568,11 +564,11 @@ window.onload = function() {
     document.getElementById("rank").rows[i].style.backgroundColor = driverlist[document.getElementById("rank").rows[i].getElementsByTagName('td').item(2).innerHTML].teamcolor;
     document.getElementById("rank").rows[i].style.color = driverlist[document.getElementById("rank").rows[i].getElementsByTagName('td').item(2).innerHTML].teamfont;
     document.getElementById("position").rows[i].style.backgroundColor = "white";
-    document.getElementById("position").rows[i].style.fontSize = "22px";
+    document.getElementById("position").rows[i].style.fontSize = "20px";
     document.getElementById("position").rows[i].style.textAlign = "center";
     document.getElementById("position").rows[i].style.fontWeight = "bold";
-    document.getElementById("rank").rows[i].style.fontSize = "22px";
-    document.getElementById("rank").rows[i].getElementsByTagName('td').item(2).style.fontSize = "15px";
+    document.getElementById("rank").rows[i].style.fontSize = "20px";
+    document.getElementById("rank").rows[i].getElementsByTagName('td').item(2).style.fontSize = "12px";
     document.getElementById("rank").rows[i].getElementsByTagName('td').item(0).style.textAlign = "left";
     document.getElementById("rank").rows[i].getElementsByTagName('td').item(1).style.textAlign = "right";
     document.getElementById("rank").rows[i].getElementsByTagName('td').item(2).style.textAlign = "right";
@@ -586,12 +582,12 @@ window.onload = function() {
     document.getElementById("driverStandings").rows[i].style.backgroundColor = driverlist[document.getElementById("rank").rows[i].getElementsByTagName('td').item(2).innerHTML].teamcolor;
     document.getElementById("driverStandings").rows[i].style.color = driverlist[document.getElementById("rank").rows[i].getElementsByTagName('td').item(2).innerHTML].teamfont;
     document.getElementById("driverposition").rows[i].style.backgroundColor = "white";
-    document.getElementById("driverposition").rows[i].style.fontSize = "22px";
+    document.getElementById("driverposition").rows[i].style.fontSize = "20px";
     document.getElementById("driverposition").rows[i].style.textAlign = "center";
     document.getElementById("driverposition").rows[i].style.fontWeight = "bold";
-    document.getElementById("driverStandings").rows[i].style.fontSize = "22px";
-    document.getElementById("driverStandings").rows[i].getElementsByTagName('td').item(2).style.fontSize = "19px";
-    document.getElementById("driverStandings").rows[i].getElementsByTagName('td').item(3).style.fontSize = "15px";
+    document.getElementById("driverStandings").rows[i].style.fontSize = "20px";
+    document.getElementById("driverStandings").rows[i].getElementsByTagName('td').item(2).style.fontSize = "17px";
+    document.getElementById("driverStandings").rows[i].getElementsByTagName('td').item(3).style.fontSize = "12px";
     document.getElementById("driverStandings").rows[i].getElementsByTagName('td').item(0).style.textAlign = "left";
     document.getElementById("driverStandings").rows[i].getElementsByTagName('td').item(1).style.textAlign = "right";
     document.getElementById("driverStandings").rows[i].getElementsByTagName('td').item(2).style.textAlign = "right";
@@ -606,12 +602,12 @@ window.onload = function() {
     document.getElementById("teamStandings").rows[i/2+.5].style.backgroundColor = driverlist[document.getElementById("rank").rows[i].getElementsByTagName('td').item(2).innerHTML].teamcolor;
     document.getElementById("teamStandings").rows[i/2+.5].style.color = driverlist[document.getElementById("rank").rows[i].getElementsByTagName('td').item(2).innerHTML].teamfont;
     document.getElementById("teamposition").rows[i/2+.5].style.backgroundColor = "white";
-    document.getElementById("teamposition").rows[i/2+.5].style.fontSize = "22px";
+    document.getElementById("teamposition").rows[i/2+.5].style.fontSize = "20px";
     document.getElementById("teamposition").rows[i/2+.5].style.textAlign = "center";
     document.getElementById("teamposition").rows[i/2+.5].style.fontWeight = "bold";
-    document.getElementById("teamStandings").rows[i/2+.5].style.fontSize = "22px";
-    document.getElementById("teamStandings").rows[i/2+.5].getElementsByTagName('td').item(2).style.fontSize = "19px";
-    document.getElementById("teamStandings").rows[i/2+.5].getElementsByTagName('td').item(3).style.fontSize = "15px";
+    document.getElementById("teamStandings").rows[i/2+.5].style.fontSize = "20px";
+    document.getElementById("teamStandings").rows[i/2+.5].getElementsByTagName('td').item(2).style.fontSize = "17px";
+    document.getElementById("teamStandings").rows[i/2+.5].getElementsByTagName('td').item(3).style.fontSize = "12px";
     document.getElementById("teamStandings").rows[i/2+.5].getElementsByTagName('td').item(0).style.textAlign = "left";
     document.getElementById("teamStandings").rows[i/2+.5].getElementsByTagName('td').item(1).style.textAlign = "right";
     document.getElementById("teamStandings").rows[i/2+.5].getElementsByTagName('td').item(2).style.textAlign = "right";
@@ -640,11 +636,11 @@ window.onload = function() {
     document.getElementById("rank").rows[i+1].style.backgroundColor = driverlist[document.getElementById("rank").rows[i+1].getElementsByTagName('td').item(2).innerHTML].teamcolor;
     document.getElementById("rank").rows[i+1].style.color = driverlist[document.getElementById("rank").rows[i+1].getElementsByTagName('td').item(2).innerHTML].teamfont;
     document.getElementById("position").rows[i+1].style.backgroundColor = "white";
-    document.getElementById("position").rows[i+1].style.fontSize = "22px";
+    document.getElementById("position").rows[i+1].style.fontSize = "20px";
     document.getElementById("position").rows[i+1].style.textAlign = "center";
     document.getElementById("position").rows[i+1].style.fontWeight = "bold";
-    document.getElementById("rank").rows[i+1].style.fontSize = "22px";
-    document.getElementById("rank").rows[i+1].getElementsByTagName('td').item(2).style.fontSize = "15px";
+    document.getElementById("rank").rows[i+1].style.fontSize = "20px";
+    document.getElementById("rank").rows[i+1].getElementsByTagName('td').item(2).style.fontSize = "12px";
     document.getElementById("rank").rows[i+1].getElementsByTagName('td').item(0).style.textAlign = "left";
     document.getElementById("rank").rows[i+1].getElementsByTagName('td').item(1).style.textAlign = "right";
     document.getElementById("rank").rows[i+1].getElementsByTagName('td').item(2).style.textAlign = "right";
@@ -658,12 +654,12 @@ window.onload = function() {
     document.getElementById("driverStandings").rows[i+1].style.backgroundColor = driverlist[document.getElementById("rank").rows[i+1].getElementsByTagName('td').item(2).innerHTML].teamcolor;
     document.getElementById("driverStandings").rows[i+1].style.color = driverlist[document.getElementById("rank").rows[i+1].getElementsByTagName('td').item(2).innerHTML].teamfont;
     document.getElementById("driverposition").rows[i+1].style.backgroundColor = "white";
-    document.getElementById("driverposition").rows[i+1].style.fontSize = "22px";
+    document.getElementById("driverposition").rows[i+1].style.fontSize = "20px";
     document.getElementById("driverposition").rows[i+1].style.textAlign = "center";
     document.getElementById("driverposition").rows[i+1].style.fontWeight = "bold";
-    document.getElementById("driverStandings").rows[i+1].style.fontSize = "22px";
-    document.getElementById("driverStandings").rows[i+1].getElementsByTagName('td').item(2).style.fontSize = "19px";
-    document.getElementById("driverStandings").rows[i+1].getElementsByTagName('td').item(3).style.fontSize = "15px";
+    document.getElementById("driverStandings").rows[i+1].style.fontSize = "20px";
+    document.getElementById("driverStandings").rows[i+1].getElementsByTagName('td').item(2).style.fontSize = "17px";
+    document.getElementById("driverStandings").rows[i+1].getElementsByTagName('td').item(3).style.fontSize = "12px";
     document.getElementById("driverStandings").rows[i+1].getElementsByTagName('td').item(0).style.textAlign = "left";
     document.getElementById("driverStandings").rows[i+1].getElementsByTagName('td').item(1).style.textAlign = "right";
     document.getElementById("driverStandings").rows[i+1].getElementsByTagName('td').item(2).style.textAlign = "right";
@@ -692,6 +688,7 @@ function nextRace() {
     var PL = document.getElementById("PL");
     var Pass = document.getElementById("Pass");
     var Tires = document.getElementById("Tires");
+    document.getElementById("events").innerHTML = " ";
     document.getElementById("racesD").innerHTML = +racesD.innerHTML+1;
     document.getElementById("racesDT").innerHTML = +racesDT.innerHTML+1;
     a.innerHTML = speed [Math.floor(Math.random() * 5)];
@@ -745,27 +742,27 @@ function colorize(card) {
     case "+1":
     card.style.backgroundColor = "#DF0001";
     card.style.color = "white";
-    card.style.fontSize = "50px";
+    card.style.fontSize = "60px";
     break;
     case "+2":
     card.style.backgroundColor = "#FFD302";
     card.style.color = "white";
-    card.style.fontSize = "50px";
+    card.style.fontSize = "60px";
     break;
     case "+3":
     card.style.backgroundColor = "#019B4A";
     card.style.color = "white";
-    card.style.fontSize = "50px";
+    card.style.fontSize = "60px";
     break;
     case "+4":
     card.style.backgroundColor = "#0093E1";
     card.style.color = "white";
-    card.style.fontSize = "50px";
+    card.style.fontSize = "60px";
     break;
     case "+5":
     card.style.backgroundColor = "#808080";
     card.style.color = "white";
-    card.style.fontSize = "50px";
+    card.style.fontSize = "60px";
     break;
     case "N":
     card.style.backgroundColor = "white";
@@ -774,7 +771,7 @@ function colorize(card) {
     case "Race Over":
     card.style.backgroundColor = "black";
     card.style.color = "white";
-    card.style.fontSize = "75px";
+    card.style.fontSize = "60px";
     break;
     } ;
 }
@@ -1070,7 +1067,13 @@ function nextlap() {
     while (x < DC) {
     DN = rowData.item(x).getElementsByTagName('td').item(2).innerHTML;
     if (driverlist[DN].damage >= 5 && driverlist[DN].damage < 99) {
-    (alert (driverlist[DN].name + " has retired from the race."));
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[DN].name + " has retired from the race.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
    rowData.item(x).getElementsByTagName('td').item(1).innerHTML = "Out";
     tableData.insertBefore(rowData.item(x),rowData.item(DC));
     DC -= 1;} 
@@ -1085,12 +1088,25 @@ function nextlap() {
     if (driverlist[DN].damage <= 4){
     rowData.item(i).getElementsByTagName('td').item(1).innerHTML = parseFloat(rowData.item(i).getElementsByTagName('td').item(1).innerHTML).toFixed(3)};
     }
-    alert ("End of Lap " + lapsD.innerHTML);
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode("End of lap " + lapsD.innerHTML + ".");
+
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
     lapsD.innerHTML = +lapsD.innerHTML+1;
     if (+document.getElementById("lapsD").innerHTML > document.getElementById("lapsT").innerHTML){
     var tableData = document.getElementById('rank').getElementsByTagName('tbody').item(0);
     var rowData = tableData.getElementsByTagName('tr'); 
-     alert(document.getElementById("rank").rows[1].cells[0].innerHTML + " of Team " + driverlist[document.getElementById("rank").rows[1].cells[2].innerHTML].team + " won the race.");
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(document.getElementById("rank").rows[1].cells[0].innerHTML + " of Team " + driverlist[document.getElementById("rank").rows[1].cells[2].innerHTML].team + " won the race.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
     lapsD.innerHTML = "Race Over";
     for (var i = 0; i < rowData.length; i++) {
     if (rowData.item(i).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML) {
@@ -1179,18 +1195,26 @@ function nextlap() {
 
 function pitStop() {
     if (+document.getElementById("lapsD").innerHTML <= document.getElementById("lapsT").innerHTML) {
-    var a = document.getElementById("card0") ;
-    var b = document.getElementById("card1") ;
-    var c = document.getElementById("card2") ;
-    var d = document.getElementById("card3") ;
-    var e = document.getElementById("card4") ;
-    var f = document.getElementById("card5") ;
-    var g = document.getElementById("card6") ;
-    var h = document.getElementById("card7") ;
-    var i = document.getElementById("card8") ;
-    var PL = document.getElementById("PL") ;
-    var ST = (Math.floor(Math.random()*2000)+2000)/1000 ;
-    alert ("You made a " + (+PL.innerHTML+ST) + " second pit stop.") 
+    var a = document.getElementById("card0");
+    var b = document.getElementById("card1");
+    var c = document.getElementById("card2");
+    var d = document.getElementById("card3");
+    var e = document.getElementById("card4");
+    var f = document.getElementById("card5");
+    var g = document.getElementById("card6");
+    var h = document.getElementById("card7");
+    var i = document.getElementById("card8");
+    var PL = document.getElementById("PL");
+    var ST = (Math.floor(Math.random()*2000)+2000)/1000;
+    alert ("You made a " + (+PL.innerHTML+ST) + " second pit stop.");
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[201].name + " made a pit stop.");
+
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
     T01.innerHTML = +T01.innerHTML-PL.innerHTML-ST;
     a.innerHTML = speed [Math.floor(Math.random() * 5)] ;
     b.innerHTML = speed [Math.floor(Math.random() * 5)] ;
@@ -1217,6 +1241,13 @@ function Qualifying(){
     rowData.item(i).getElementsByTagName('td').item(1).innerHTML = +rowData.item(i).getElementsByTagName('td').item(1).innerHTML+(Math.floor(Math.random()*(6000-driverlist[DN].consis*1000))-(3000-driverlist[DN].consis*1000/2)+driverlist[DN].skill*1000)/1000};
     }
     sortData();
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(document.getElementById("rank").rows[1].cells[0].innerHTML + " qualifies on pole position.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
     for(var i = 0; i < DC; i++) { 
 (rowData.item(i).getElementsByTagName('td').item(1).innerHTML = +i*-0.25);
     };
@@ -1252,7 +1283,14 @@ function ET1()
     DND = rowData.item(i).getElementsByTagName('td').item(2).innerHTML;
     ET = Math.random()*100-driverlist[DNA].attack+driverlist[DND].defend;
     if (ET < 1) {
-    (alert(rowData.item(i).getElementsByTagName('td').item(0).innerHTML + " and " + rowData.item(j).getElementsByTagName('td').item(0).innerHTML + " go wheel to wheel and make contact with each other..."));
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(rowData.item(i).getElementsByTagName('td').item(0).innerHTML + " and " + rowData.item(j).getElementsByTagName('td').item(0).innerHTML + " go wheel to wheel and make contact with each other...");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
+    if (rowData.item(i).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML || rowData.item(j).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML){(alert(rowData.item(i).getElementsByTagName('td').item(0).innerHTML + " and " + rowData.item(j).getElementsByTagName('td').item(0).innerHTML + " go wheel to wheel and make contact with each other..."))};
     if (rowData.item(i).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML){
     DTP(); 
     x = j;
@@ -1268,7 +1306,14 @@ function ET1()
     DT1();
     } }
     else if(ET < 2) {
-    (alert(rowData.item(i).getElementsByTagName('td').item(0).innerHTML + " forces " + rowData.item(j).getElementsByTagName('td').item(0).innerHTML + " off track."));
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(rowData.item(i).getElementsByTagName('td').item(0).innerHTML + " forces " + rowData.item(j).getElementsByTagName('td').item(0).innerHTML + " off track.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
+    if (rowData.item(i).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML || rowData.item(j).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML){(alert(rowData.item(i).getElementsByTagName('td').item(0).innerHTML + " forces " + rowData.item(j).getElementsByTagName('td').item(0).innerHTML + " off track."))};
     if (rowData.item(j).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML) {
     OTTP();
     } else {
@@ -1276,7 +1321,14 @@ function ET1()
     OTT1(); 
     } }
     else if(ET < 3) {
-    (alert(rowData.item(i).getElementsByTagName('td').item(0).innerHTML + " and " + rowData.item(j).getElementsByTagName('td').item(0).innerHTML + " go wheel to wheel and make contact with each other..."));
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(rowData.item(i).getElementsByTagName('td').item(0).innerHTML + " and " + rowData.item(j).getElementsByTagName('td').item(0).innerHTML + " go wheel to wheel and make contact with each other...");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
+    if (rowData.item(i).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML || rowData.item(j).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML){(alert(rowData.item(i).getElementsByTagName('td').item(0).innerHTML + " and " + rowData.item(j).getElementsByTagName('td').item(0).innerHTML + " go wheel to wheel and make contact with each other..."))};
     if (rowData.item(i).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML) {
     DTP();
     } else {
@@ -1284,7 +1336,14 @@ function ET1()
     DT1(); 
     } }
     else if(ET < 4) {
-    (alert(rowData.item(i).getElementsByTagName('td').item(0).innerHTML + " and " + rowData.item(j).getElementsByTagName('td').item(0).innerHTML + " go wheel to wheel and make contact with each other..."));
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(rowData.item(i).getElementsByTagName('td').item(0).innerHTML + " and " + rowData.item(j).getElementsByTagName('td').item(0).innerHTML + " go wheel to wheel and make contact with each other...");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
+    if (rowData.item(i).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML || rowData.item(j).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML){(alert(rowData.item(i).getElementsByTagName('td').item(0).innerHTML + " and " + rowData.item(j).getElementsByTagName('td').item(0).innerHTML + " go wheel to wheel and make contact with each other..."))};
     if (rowData.item(j).getElementsByTagName('td').item(0).innerHTML == document.getElementById("N01").innerHTML) {
     DTP();
     } else {
@@ -1333,6 +1392,13 @@ function DTP()
     DT = Math.random();
     if (DT <0.01) {
     SC = Math.floor(Math.random()*3+1);
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[201].name + " makes contact with the wall and crashes out of the race. Safety car comes out for " + SC + " laps.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
     (alert("and you have crashed out of the race. Safety car comes out for " + SC + " laps."));
     document.getElementById("T01").innerHTML= ("Out");
     for (var i = 0; i < rowData.length; i++) {
@@ -1346,7 +1412,6 @@ function DTP()
     } }
     for(var i = 0; i < DC; i++) { 
     driverlist[rowData.item(i).getElementsByTagName('td').item(2).innerHTML].pit = driverlist[rowData.item(i).getElementsByTagName('td').item(2).innerHTML].pit + SC;
-        
     }
     sortData();
     x = 999;
@@ -1360,6 +1425,13 @@ function DTP()
     {nextlap()};
     }
     else if(DT <0.02) {
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[201].name + " makes contact with the wall and crashes out of the race.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
     (alert("and you crash out of the race."));
     (driverlist[201].damage = 99);
     document.getElementById("T01").innerHTML= ("Out");
@@ -1371,6 +1443,13 @@ function DTP()
     {nextlap()};
     }
     else if(DT <0.04) {
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[201].name + " makes contact with the wall and takes 1 damage. He has also suffered a puncture and has to pit.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
     (alert("you take 1 damage and suffer a puncture forcing you to pit."));
     (driverlist[201].damage = +driverlist[201].damage+1)
     pitStop();
@@ -1382,11 +1461,25 @@ function DTP()
     }
     else if(DT <0.16) {
     TL = Math.floor(Math.random()*5+6);
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[201].name + " makes contact with the wall and lost " + TL + " seconds.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
     (alert("and you lose " + TL + " seconds."));
 (document.getElementById("T01").innerHTML = +T01.innerHTML-TL);
     }
     else if(DT <0.26) {
     TL = Math.floor(Math.random()*5+1);
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[201].name + " makes contact with the wall and lost " + TL + " seconds.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
     (alert("and you lose " + TL + " seconds."));
 (document.getElementById("T01").innerHTML = +T01.innerHTML-TL);
     }
@@ -1401,7 +1494,15 @@ function DTP()
     else {
     (alert("and you just narrowly avoid damage."))
     };
-    if (driverlist[201].damage >= 5 && driverlist[201].damage < 99) {(alert (document.getElementById("N01").innerHTML + " has retired from the race."));
+    if (driverlist[201].damage >= 5 && driverlist[201].damage < 99) {
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[201].name + " has retired from the race.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
+    (alert ("Your car has become to unreliable and you are forced to retire this race."));
     document.getElementById("T01").innerHTML= ("Out");
     for (var i = 0; i < rowData.length; i++) {
     if (rowData.item(i).getElementsByTagName('td').item(2).innerHTML == 201) {
@@ -1417,6 +1518,13 @@ function DT1()
     {DT = Math.random(); 
     {if (DT <0.01) {
     SC = Math.floor(Math.random()*3+1);
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[DN].name + " makes contact with the wall and crashes out of the race. Safety car comes out for " + SC + " laps.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
     (alert(driverlist[DN].name + " makes contact with the wall and has crashed out of the race. Safety car comes out for " + SC + " laps."));
     driverlist[DN].damage = 99;
     rowData.item(x).getElementsByTagName('td').item(1).innerHTML = "Out";
@@ -1446,7 +1554,13 @@ else {
     x = 999;
     }
     else if(DT <0.02) {
-    alert(driverlist[DN].name + " makes contact with the wall and crashes out of the race.");
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[DN].name + " makes contact with the wall and crashes out of the race.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
     (driverlist[DN].damage = 99);
     rowData.item(x).getElementsByTagName('td').item(1).innerHTML = "Out";
     tableData.insertBefore(rowData.item(x),rowData.item(DC));
@@ -1455,7 +1569,13 @@ else {
     DN = rowData.item(x).getElementsByTagName('td').item(2).innerHTML;
 }
     else if(DT <0.04) {
-    alert(driverlist[DN].name + " makes contact with the wall and takes 1 damage. He has also suffered a puncture and has to pit.");
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[DN].name + " makes contact with the wall and takes 1 damage. He has also suffered a puncture and has to pit.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
     driverlist[DN].damage = driverlist[DN].damage + 1;
     PS2();
     }
@@ -1465,12 +1585,24 @@ else {
     }
     else if(DT <0.16) {
     TL = Math.floor(Math.random()*5+6);
-    alert(driverlist[DN].name + " makes contact with the wall and lost " + TL + " seconds.");
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[DN].name + " makes contact with the wall and lost " + TL + " seconds.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
 (rowData.item(x).getElementsByTagName('td').item(1).innerHTML = +parseInt(rowData.item(x).getElementsByTagName('td').item(1).innerHTML)-TL);
     }
     else if(DT <0.26) {
     TL = Math.floor(Math.random()*5+1);
-    alert(driverlist[DN].name + " makes contact with the wall and lost " + TL + " seconds.");
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[DN].name + " makes contact with the wall and lost " + TL + " seconds.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
 (rowData.item(x).getElementsByTagName('td').item(1).innerHTML = +parseInt(rowData.item(x).getElementsByTagName('td').item(1).innerHTML)-TL);
     }
     else if(DT <0.46) {
@@ -1491,17 +1623,38 @@ function OTTP()
     {OTT = Math.random();
     if (OTT <0.05) {
     alert("and has gone off track lost 10 seconds and...");
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[201].name + " has some tire slip and has gone off track lost 10 seconds.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
 document.getElementById("T01").innerHTML = +T01.innerHTML-10;
     DTP();}
     else if(OTT <0.20) {
     TL = Math.floor(Math.random()*5+6);
     (alert("and lost " + TL + " seconds."));
-(document.getElementById("T01").innerHTML = +T01.innerHTML-TL)
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[201].name + " has some tire slip and lost " + TL + " seconds.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
+(document.getElementById("T01").innerHTML = +T01.innerHTML-TL);
     }
     else if(OTT <0.50) {
     TL = Math.floor(Math.random()*5+1);
     (alert("and lost " + TL + " seconds."));
-(document.getElementById("T01").innerHTML = +T01.innerHTML-TL)
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[201].name + " has some tire slip and lost " + TL + " seconds.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
+(document.getElementById("T01").innerHTML = +T01.innerHTML-TL);
     }
     else
     alert("but recovered.");
@@ -1512,17 +1665,37 @@ function OTT1()
     DN = rowData.item(x).getElementsByTagName('td').item(2).innerHTML; 
     {OTT = Math.random(); if(rowData.item(x).getElementsByTagName('td').item(0).innerHTML !== document.getElementById("N01").innerHTML){
     if (OTT <0.05) {
-    alert(driverlist[DN].name + " has some tire slip and has gone off track lost 10 seconds.");
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[DN].name + " has some tire slip and has gone off track lost 10 seconds.");
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
 rowData.item(x).getElementsByTagName('td').item(1).innerHTML =+parseFloat(rowData.item(x).getElementsByTagName('td').item(1).innerHTML)-10;
     DT1();}
     else if(OTT <0.20) {
     TL = Math.floor(Math.random()*5+6);
-   (alert(driverlist[DN].name + " has some tire slip and lost " + TL + " seconds."));
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[DN].name + " has some tire slip and lost " + TL + " seconds.");
+
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
 (rowData.item(x).getElementsByTagName('td').item(1).innerHTML =+parseFloat(rowData.item(x).getElementsByTagName('td').item(1).innerHTML)-TL);
     }
     else if(OTT <0.50) {
     TL = Math.floor(Math.random()*5+1);
-   (alert(driverlist[DN].name + " has some tire slip and lost " + TL + " seconds."));
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[DN].name + " has some tire slip and lost " + TL + " seconds.");
+
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
 (rowData.item(x).getElementsByTagName('td').item(1).innerHTML =+parseFloat(rowData.item(x).getElementsByTagName('td').item(1).innerHTML)-TL);
     }
     else {
@@ -1538,7 +1711,15 @@ function PS1()
     if (driverlist[DN].pit == +document.getElementById("lapsD").innerHTML) {
     rowData.item(x).getElementsByTagName('td').item(1).innerHTML = +parseFloat(rowData.item(x).getElementsByTagName('td').item(1).innerHTML)-document.getElementById("PL").innerHTML-(Math.floor(Math.random()*3000)+2000)/1000;
     driverlist[DN].pit = +lapsD.innerHTML+30;
-   (alert(rowData.item(x).getElementsByTagName('td').item(0).innerHTML + " makes a pit stop."))}}}};
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[DN].name + " made a pit stop.");
+
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
+    }}}};
 function PS2()
     {var tableData = document.getElementById('rank').getElementsByTagName('tbody').item(0); 
 var rowData = tableData.getElementsByTagName('tr'); 
@@ -1546,7 +1727,15 @@ var rowData = tableData.getElementsByTagName('tr');
     {
     rowData.item(x).getElementsByTagName('td').item(1).innerHTML = +parseFloat(rowData.item(x).getElementsByTagName('td').item(1).innerHTML)-document.getElementById("PL").innerHTML-(Math.floor(Math.random()*3000)+2000)/1000;
     driverlist[DN].pit = +lapsD.innerHTML+30;
-   (alert(rowData.item(x).getElementsByTagName('td').item(0).innerHTML + " makes a pit stop."))}};
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[DN].name + " made a pit stop.");
+
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
+    }};
    
 function getWeather() {
     weatherN = Math.random();
@@ -1566,6 +1755,14 @@ function getWeather() {
     weatherN = 0;
     document.getElementById("Weather").innerHTML = "Sunny";
     }
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode("It's " + document.getElementById("Weather").innerHTML + " here as we are about to start race " + document.getElementById("racesD").innerHTML + " in the championship.");
+
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
 }
    
 function sortData() {
