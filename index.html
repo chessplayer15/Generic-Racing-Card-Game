@@ -48,7 +48,7 @@ thead {font-size: 20px; font-weight: bold; text-align: center; background-color:
 
 .you {position: absolute; top: 281px; left: 292px; height: 420px; width: 360px; background-color: white}
 
-.buttons {position: absolute; top: 751px; left: 292px; height: 249px; width: 360px; background-color: green}
+.buttons {position: absolute; top: 751px; left: 342px; height: 249px; width: 360px; background-color: green}
 
 p {font-size: 20px; font-weight: bold; margin: 0 0 0 0}
 
@@ -1421,8 +1421,9 @@ function DTP()
 (rowData.item(i).getElementsByTagName('td').item(1).innerHTML = +i*-0.500);
     }
     while(+document.getElementById("lapsD").innerHTML  <= +document.getElementById("lapsT").innerHTML)
-    {nextlap()};
-    }
+    {nextlap();
+    if (document.getElementById("lapsD").innerHTML == "Race Over") {break;} 
+    }; }
     else if(DT <0.02) {
     var div = document.getElementById("events");
 
@@ -1439,8 +1440,9 @@ function DTP()
     tableData.insertBefore(rowData.item(i),rowData.item(DC));} }
     DC -= 1;
  while(+document.getElementById("lapsD").innerHTML  <= +document.getElementById("lapsT").innerHTML)
-    {nextlap()};
-    }
+    {nextlap();
+    if (document.getElementById("lapsD").innerHTML == "Race Over") {break;} 
+    }; }
     else if(DT <0.04) {
     var div = document.getElementById("events");
 
@@ -1508,9 +1510,9 @@ function DTP()
     tableData.insertBefore(rowData.item(i),rowData.item(DC));} }
     DC -= 1;
  while(+document.getElementById("lapsD").innerHTML  <= +document.getElementById("lapsT").innerHTML)
-    {nextlap()}
-    if (document.getElementById("lapsD").innerHTML) {break;}};
-    };
+    {nextlap();
+    if (document.getElementById("lapsD").innerHTML == "Race Over") {break;} 
+    }; }
 function DT1()
     {var tableData = document.getElementById('rank').getElementsByTagName('tbody').item(0);
     var rowData = tableData.getElementsByTagName('tr'); 
