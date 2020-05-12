@@ -30,7 +30,7 @@ thead {font-size: 20px; font-weight: bold; text-align: center; background-color:
 
 #Player, #Teammate {background-color: #ffffff; font-weight: bold;}
 
-#N01, #N02, #DName01, #DName02, #TN01 {margin: 5px 5px 5px 5px; text-align: left; font: black; font-size: 18px;}
+#N01, #N02, #DName01, #DName02, #TN01 {margin: 5px 5px 5px 5px; text-align: left; font: black; font-size: 20px;}
 
 #T01, #T02, #P01, #P02, #TP01 {margin: 5px 5px 5px 5px; text-align: right; font-size: 20px;}
 
@@ -61,7 +61,6 @@ p {font-size: 20px; font-weight: bold; margin: 0 0 0 0}
 #nextBtn {font-size: 30px; font-weight: bold; background-color: #808080; border-radius: 5px; margin: 30px 0 30px 0;}
 
 #eventhead {position: absolute; top: 81px; left: 652px; border: 5px solid black; height: 40px; width: 238px; background-color: white; text-align: left; font-weight: bold; font-size: 28px; color: black; text-decoration: underline; margin: 0 0 0 0;}
-
 
 #events {position: absolute; top: 121px; left: 652px; border: 5px solid black; height: 879px; width: 238px; background-color: white; text-align: left; margin: 0 0 0 0; overflow: auto;}
 </style>
@@ -1509,7 +1508,8 @@ function DTP()
     tableData.insertBefore(rowData.item(i),rowData.item(DC));} }
     DC -= 1;
  while(+document.getElementById("lapsD").innerHTML  <= +document.getElementById("lapsT").innerHTML)
-    {nextlap()}};
+    {nextlap()}
+    if (document.getElementById("lapsD").innerHTML) {break;}};
     };
 function DT1()
     {var tableData = document.getElementById('rank').getElementsByTagName('tbody').item(0);
