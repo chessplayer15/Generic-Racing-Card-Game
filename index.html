@@ -8,21 +8,21 @@ body {margin: auto; background-color: green}
 
 #container {height: 1000px; width: 900px; margin: auto; text-align: center}
 
-#racepage {float: left; width: 294px; height: 30px; border: 3px solid black; background-color: #D00000; font-weight: bold; font-size: 25px; color: white; margin: 5px 0 5px 0;}
+#racepage {position: fixed; top: 0px; left: 0px; width: 294px; height: 30px; border: 3px solid black; background-color: #D00000; font-weight: bold; font-size: 25px; color: white; margin: 5px 0 5px 0;}
 
-#standpage {float: left; width: 294px; height: 30px; border: 3px solid black; background-color: #D00000; font-weight: bold; font-size: 25px; color: white; margin: 5px 0 5px 0;}
+#standpage {position: fixed; top: 0px; left: 300px; width: 294px; height: 30px; border: 3px solid black; background-color: #D00000; font-weight: bold; font-size: 25px; color: white; margin: 5px 0 5px 0;}
 
-#tstandpage {float: left; width: 294px; height: 30px; border: 3px solid black; background-color: #D00000; font-weight: bold; font-size: 25px; color: white; margin: 5px 0 5px 0;}
+#tstandpage {position: fixed; top: 0px; left: 600px; width: 294px; height: 30px; border: 3px solid black; background-color: #D00000; font-weight: bold; font-size: 25px; color: white; margin: 5px 0 5px 0;}
 
 div {font-size: 0}
 
-#laps, #races, #racesT {background-color: gray; font-weight: bold; font-size: 30px; color: black; width: 900px; margin: 10px 0 0 0;}
+#laps, #races, #racesT {position: fixed; top: 31px; left: 0; background-color: gray; font-weight: bold; font-size: 30px; color: black; width: 900px; margin: 10px 0 0 0;}
 
-.position, .driverposition, .teamposition {float: left; width: 42px; background-color: white; font: black; font-size: 20px; margin: 0 0 0 0;}
+.position, .driverposition, .teamposition {position: absolute; top: 76px; left: 0; width: 42px; background-color: white; font: black; font-size: 20px; margin: 0 0 0 0;}
 
-.rank {float: left; width: 250px; background-color: black; margin: 0 0 0 0;}
+.rank {position: absolute; top: 76px; left: 42px; float: left; width: 250px; background-color: black; margin: 0 0 0 0;}
 
-.driverStandings, .teamStandings {float: left; width: 858px; background-color: black; margin: 0 0 0 0;}
+.driverStandings, .teamStandings {position: absolute; top: 76px; left: 42px; width: 858px; background-color: black; margin: 0 0 0 0;}
 
 thead {font-size: 20px; font-weight: bold; text-align: center; background-color: white; color: black; margin: 0}
 
@@ -40,15 +40,15 @@ thead {font-size: 20px; font-weight: bold; text-align: center; background-color:
 
 #card0, #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9 {margin: 20px 20px 20px 20px; float: left; height: 100px; width: 80px; background-color: white; border-radius: 5px; line-height: 100px}
 
-.track {position: absolute; top: 81px; left: 332px; height: 200px; width: 180px; background-color: black; color: white; font-size: 18px; margin: 0 0 0 0;}
+.track {position: absolute; top: 76px; left: 292px; height: 200px; width: 180px; background-color: black; color: white; font-size: 18px; margin: 0 0 0 0;}
 
-.table {position: absolute; top: 81px; left: 512px;  height: 200px; width: 180px; background-color: black; margin: 0 0 0 0;}
+.table {position: absolute; top: 76px; left: 472px;  height: 200px; width: 180px; background-color: black; margin: 0 0 0 0;}
 
 #tableCard {height: 160px; width: 120px; margin: 20px 30px 20px 30px; background-color: orange; border-radius: 12px; line-height: 160px;}
 
-.you {position: absolute; top: 281px; left: 332px; height: 420px; width: 360px; background-color: white}
+.you {position: absolute; top: 276px; left: 292px; height: 420px; width: 360px; background-color: white}
 
-.buttons {position: absolute; top: 751px; left: 332px; height: 249px; width: 360px; background-color: green}
+.buttons {position: absolute; top: 740px; left: 292px; height: 249px; width: 360px; background-color: green}
 
 p {font-size: 20px; font-weight: bold; margin: 0 0 0 0}
 
@@ -60,9 +60,10 @@ p {font-size: 20px; font-weight: bold; margin: 0 0 0 0}
 
 #nextBtn {font-size: 30px; font-weight: bold; background-color: #808080; border-radius: 5px; margin: 30px 0 30px 0;}
 
-#eventhead {position: absolute; top: 81px; left: 692px; border: 5px solid black; height: 40px; width: 238px; background-color: white; text-align: left; font-weight: bold; font-size: 28px; color: black; text-decoration: underline; margin: 0 0 0 0;}
+#eventhead {position: absolute; top: 76px; left: 652px; border: 5px solid black; height: 40px; width: 238px; background-color: white; text-align: left; font-weight: bold; font-size: 28px; color: black; text-decoration: underline; margin: 0 0 0 0;}
 
-#events {position: absolute; top: 121px; left: 692px; border: 5px solid black; height: 879px; width: 238px; background-color: white; text-align: left; margin: 0 0 0 0; overflow: auto;}
+#events {position: absolute; top: 116px; left: 652px; border: 5px solid black; height: 879px; width: 238px; background-color: white; text-align: left; margin: 0 0 0 0; overflow: auto;}
+
 </style>
 <title>Generic Racing Card Game</title>
 </head>
