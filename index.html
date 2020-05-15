@@ -1551,7 +1551,7 @@ if (pS == true) {
     var i = document.getElementById("card8");
     var PL = document.getElementById("PL");
     var ST = (Math.floor(Math.random()*2000)+2000)/1000;
-    alert ("You made a " + (+PL.innerHTML+ST) + " second pit stop.");
+    alert ("You made a " + (+PL.innerHTML+ST-5) + " second pit stop.");
     var div = document.getElementById("events");
 
     var p = document.createElement("p");
