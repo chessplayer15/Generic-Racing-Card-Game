@@ -1522,13 +1522,11 @@ function DT1()
     {if (DT <0.01) {
     SC = Math.floor(Math.random()*3+1);
     var div = document.getElementById("events");
-
     var p = document.createElement("p");
     var node = document.createTextNode(driverlist[DN].name + " makes contact with the wall and crashes out of the race. Safety car comes out for " + SC + " laps.");
     p.appendChild(node);
     div.appendChild(p);
     div.insertBefore(p, div.childNodes[0]);
-    (alert(driverlist[DN].name + " makes contact with the wall and has crashed out of the race. Safety car comes out for " + SC + " laps."));
     driverlist[DN].damage = 99;
     rowData.item(x).getElementsByTagName('td').item(1).innerHTML = "Out";
     tableData.insertBefore(rowData.item(x),rowData.item(DC));
@@ -1538,8 +1536,10 @@ function DT1()
     x = i;
     PS3();
     } }
+    if (driverlist[201].damage <= 4) {
+    (alert(driverlist[DN].name + " makes contact with the wall and has crashed out of the race. Safety car comes out for " + SC + " laps."));
     var pS = confirm("Do you want to make a pit stop?");
-if (pS == true) {
+    if (pS == true) {
     var a = document.getElementById("card0");
     var b = document.getElementById("card1");
     var c = document.getElementById("card2");
@@ -1553,10 +1553,8 @@ if (pS == true) {
     var ST = (Math.floor(Math.random()*2000)+2000)/1000;
     alert ("You made a " + (+PL.innerHTML+ST-5) + " second pit stop.");
     var div = document.getElementById("events");
-
     var p = document.createElement("p");
     var node = document.createTextNode(driverlist[201].name + " made a pit stop.");
-
     p.appendChild(node);
     div.appendChild(p);
     div.insertBefore(p, div.childNodes[0]);
