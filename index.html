@@ -3,7 +3,6 @@
 <html>
 <head>
 <style>
-
 body {margin: auto; background-color: green}
 
 #container {height: 1000px; width: 1000px; margin: auto; text-align: center}
@@ -16,7 +15,7 @@ body {margin: auto; background-color: green}
 
 div {font-size: 0}
 
-#laps, #races, #racesT {position: fixed; top: 26px; left: 0; z-index: 99; background-color: gray; font-weight: bold; font-size: 30px; color: black; width: 1000px; margin: 10px 0 0 0;}
+#laps, #races, #racesTP {position: fixed; top: 26px; left: 0; z-index: 99; background-color: gray; font-weight: bold; font-size: 30px; color: black; width: 1000px; margin: 10px 0 0 0;}
 
 .position, .driverposition, .teamposition {position: absolute; top: 71px; left: 0; width: 42px; background-color: white; font: black; font-size: 20px; margin: 0 0 0 0;}
 
@@ -48,7 +47,9 @@ thead {font-size: 20px; font-weight: bold; text-align: center; background-color:
 
 .you {position: absolute; top: 271px; left: 342px; height: 420px; width: 360px; background-color: white}
 
-.buttons {position: absolute; top: 691px; left: 292px; height: 309px; width: 360px; background-color: green}
+.buttons {position: absolute; top: 691px; left: 342px; height: 309px; width: 360px; background-color: green}
+
+.nextButton {position: absolute; top: 71px; left: 500px; height: 200px; width: 500px; background-color: green}
 
 p {font-size: 20px; font-weight: bold; margin: 0 0 0 0}
 
@@ -58,7 +59,7 @@ p {font-size: 20px; font-weight: bold; margin: 0 0 0 0}
 
 #psBtn {margin-top:30px; font-size: 30px; font-weight: bold; background-color: #F00; height: 40px; width: 180px; border-radius: 5px;}
 
-#nextBtn {font-size: 30px; font-weight: bold; background-color: #808080; border-radius: 5px; margin: 30px 0 30px 0;}
+#nextBtn {font-size: 30px; font-weight: bold; background-color: #808080; border-radius: 5px; margin: 70px 0 30px 0;}
 
 #eventhead {position: absolute; top: 71px; left: 702px; border: 5px solid black; height: 40px; width: 288px; background-color: white; text-align: left; font-weight: bold; font-size: 28px; color: black; text-decoration: underline; margin: 0 0 0 0;}
 
@@ -200,14 +201,14 @@ Race # <span id=racesD>1</span>/<span id=racesT></span>
         </tbody>
         </table>
     </div>
-<div id=buttons>
+<div class=nextButton>
     <p><button id=nextBtn onclick="nextRace()">NEXT RACE</button></p>
 </div>
 </div>
 </div>
 <div class=page3>
 <div id="Page3" class="page" style="display:none"> Content of page 3
-<div id=racesT>
+<div id=racesTP>
 Race # <span id=racesDT>1</span>/<span id=racesTT></span>
 </div>
 <div class=teamposition>
@@ -243,7 +244,7 @@ Race # <span id=racesDT>1</span>/<span id=racesTT></span>
         </tbody>
         </table>
     </div>
-<div id=buttons>
+<div class=nextButton>
     <p><button id=nextBtn onclick="nextRace()">NEXT RACE</button></p>
 </div>
 </div>
@@ -1407,7 +1408,7 @@ function DTP()
     for(var i = 0; i < DC; i++) { 
     if (driverlist[rowData.item(i).getElementsByTagName('td').item(2).innerHTML].pit <= +document.getElementById("lapsD").innerHTML+SC) {
     x = i;
-    PS2();
+    PS3();
     } }
     for(var i = 0; i < DC; i++) { 
     driverlist[rowData.item(i).getElementsByTagName('td').item(2).innerHTML].pit = driverlist[rowData.item(i).getElementsByTagName('td').item(2).innerHTML].pit + SC;
@@ -1439,7 +1440,7 @@ function DTP()
     if (rowData.item(i).getElementsByTagName('td').item(2).innerHTML == 201) {
     tableData.insertBefore(rowData.item(i),rowData.item(DC));} }
     DC -= 1;
- while(+document.getElementById("lapsD").innerHTML  <= +document.getElementById("lapsT").innerHTML)
+    while(+document.getElementById("lapsD").innerHTML  <= +document.getElementById("lapsT").innerHTML)
     {nextlap();
     if (document.getElementById("lapsD").innerHTML == "Race Over") {break;} 
     }; }
@@ -1509,7 +1510,7 @@ function DTP()
     if (rowData.item(i).getElementsByTagName('td').item(2).innerHTML == 201) {
     tableData.insertBefore(rowData.item(i),rowData.item(DC));} }
     DC -= 1;
- while(+document.getElementById("lapsD").innerHTML  <= +document.getElementById("lapsT").innerHTML)
+    while(+document.getElementById("lapsD").innerHTML  <= +document.getElementById("lapsT").innerHTML)
     {nextlap();
     if (document.getElementById("lapsD").innerHTML == "Race Over") {break;} 
     } } };
@@ -1535,12 +1536,43 @@ function DT1()
     for(var i = 0; i < DC; i++) { 
     if (driverlist[rowData.item(i).getElementsByTagName('td').item(2).innerHTML].pit <= +document.getElementById("lapsD").innerHTML+SC) {
     x = i;
-    PS2();
+    PS3();
     } }
     var pS = confirm("Do you want to make a pit stop?");
 if (pS == true) {
-    pitStop();
-}
+    var a = document.getElementById("card0");
+    var b = document.getElementById("card1");
+    var c = document.getElementById("card2");
+    var d = document.getElementById("card3");
+    var e = document.getElementById("card4");
+    var f = document.getElementById("card5");
+    var g = document.getElementById("card6");
+    var h = document.getElementById("card7");
+    var i = document.getElementById("card8");
+    var PL = document.getElementById("PL");
+    var ST = (Math.floor(Math.random()*2000)+2000)/1000;
+    alert ("You made a " + (+PL.innerHTML+ST) + " second pit stop.");
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[201].name + " made a pit stop.");
+
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
+    T01.innerHTML = +T01.innerHTML-PL.innerHTML-ST+5;
+    a.innerHTML = speed [Math.floor(Math.random() * 5)] ;
+    b.innerHTML = speed [Math.floor(Math.random() * 5)] ;
+    c.innerHTML = speed [Math.floor(Math.random() * 5)] ;
+    d.innerHTML = speed [Math.floor(Math.random() * 5)] ;
+    e.innerHTML = speed [Math.floor(Math.random() * 5)] ;
+    f.innerHTML = "N";
+    g.innerHTML = "N";
+    h.innerHTML = "N";
+    i.innerHTML = "N";
+    colorize(a); colorize(b); colorize(c); colorize(d); colorize(e); colorize(f); colorize(g); colorize(h); colorize(i); 
+    Tires.innerHTML = 20;
+} 
 else {
     
 }
@@ -1738,6 +1770,22 @@ var rowData = tableData.getElementsByTagName('tr');
     div.appendChild(p);
     div.insertBefore(p, div.childNodes[0]);
     }};
+function PS3()
+    {var tableData = document.getElementById('rank').getElementsByTagName('tbody').item(0); 
+var rowData = tableData.getElementsByTagName('tr'); 
+    DN = rowData.item(x).getElementsByTagName('td').item(2).innerHTML; 
+    {
+    rowData.item(x).getElementsByTagName('td').item(1).innerHTML = +parseFloat(rowData.item(x).getElementsByTagName('td').item(1).innerHTML)+5-document.getElementById("PL").innerHTML-(Math.floor(Math.random()*3000)+2000)/1000;
+    driverlist[DN].pit = +lapsD.innerHTML+30;
+    var div = document.getElementById("events");
+
+    var p = document.createElement("p");
+    var node = document.createTextNode(driverlist[DN].name + " made a pit stop.");
+
+    p.appendChild(node);
+    div.appendChild(p);
+    div.insertBefore(p, div.childNodes[0]);
+    }};
    
 function getWeather() {
     weatherN = Math.random();
@@ -1802,7 +1850,7 @@ ele.style.display = 'block'
 }
 
 function toggleRules() {
-    alert("Welcome to my racing game!  The objective of the game is to finish in first.  To start there is qualifying to determine starting positions.  The speeds of the cards are as follows Red (+0.5-+1.5), Yellow (+1.5-+2.5), Green (+2.5-+3.5), Blue (+3.5-+4.5), and Gray (+4.5-+5.5).  You can play anything on a Red and a Red on anything.  Also you can play a Yellow on a Yellow.  Your turn ends when you pay 2 cards or click end turn.  At the end of every turn you will draw one or two cards.  Clicking on Pit Stop will replace your hand and give you 6 new cards but will cost you about PL+3 or " + (+document.getElementById("PL").innerHTML+3) + " seconds and it also ends the lap.  Maximum hand size is 9 cards.  There is also a difficulty to passing other drivers.  How passing works is the driver behind will have the Pass distance, " + +document.getElementById("Pass").innerHTML + ", as a handicap.  If cars get within 0.250 seconds of each other, after the Pass handicap, they will fight for position, possible outcomes are getting by, being blocked, going wheel to wheel and becoming equal, going off track, or making contact and taking damage.  If cars get close but do not pass they will go to 0.200 to 0.300 seconds behind.  For example the driver in 5th is 5 seconds behind 1st and the driver in 6th becomes 4.5 seconds behind 1st, if the Pass difficulty is higher than .7 then 6th place will lose time and be stuck behind 5th, if Pass is less than .3 than 6th will get by 5th, and if Pass is between those two numbers than they will fight for position.  Cars will randomly take damage and go off track (the faster you go the more likely you are to go off track and/or take damage).  Damage has no effect until you aquire 5, at which point you retire from the race.  Going off track might cost you time and sometimes you might take damage.  Weather sunny and cloudy have no effect on the game, while rain increases the chance of losing traction/going off track, higher chance with more rain.  You can ignore tires right now they do nothing.  I hope you have fun with the game I made!");
+    alert("Welcome to my racing game!  The objective of the game is to finish in first.  To start there is qualifying to determine starting positions.  The speeds of the cards are as follows Red (+0.5-+1.5), Yellow (+1.5-+2.5), Green (+2.5-+3.5), Blue (+3.5-+4.5), and Gray (+4.5-+5.5).  You can play anything on a Red and a Red on anything.  Also you can play a Yellow on a Yellow.  Your turn ends when you pay 2 cards or click end turn.  At the end of every turn you will draw one or two cards.  Clicking on Pit Stop will replace your hand and give you 6 new cards but will cost you about PL+3 or " + (+document.getElementById("PL").innerHTML+3) + " seconds and it also ends the lap (Pitting under the safety car takes 5 seconds less).  Maximum hand size is 9 cards.  There is also a difficulty to passing other drivers.  How passing works is the driver behind will have the Pass distance, " + +document.getElementById("Pass").innerHTML + ", as a handicap.  If cars get within 0.250 seconds of each other, after the Pass handicap, they will fight for position, possible outcomes are getting by, being blocked, going wheel to wheel and becoming equal, going off track, or making contact and taking damage.  If cars get close but do not pass they will go to 0.200 to 0.300 seconds behind.  For example the driver in 5th is 5 seconds behind 1st and the driver in 6th becomes 4.5 seconds behind 1st, if the Pass difficulty is higher than .7 then 6th place will lose time and be stuck behind 5th, if Pass is less than .3 than 6th will get by 5th, and if Pass is between those two numbers than they will fight for position.  Cars will randomly take damage and go off track (the faster you go the more likely you are to go off track and/or take damage).  Damage has no effect until you aquire 5, at which point you retire from the race.  Going off track might cost you time and sometimes you might take damage.  Weather sunny and cloudy have no effect on the game, while rain increases the chance of losing traction/going off track, higher chance with more rain.  You can ignore tires right now they do nothing.  I hope you have fun with the game I made!");
 }
 </script>
 </body>
